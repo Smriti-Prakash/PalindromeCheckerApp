@@ -18,11 +18,10 @@ public class PalindromeCheckerApp {
             reversed = reversed + original.charAt(i);  // String concatenation
         }
 
-        // Display reversed string
+
         System.out.println("Original String : " + original);
         System.out.println("Reversed String : " + reversed);
 
-        // Compare using equals() method
         if (original.equals(reversed)) {
             System.out.println("Result: The given string is a Palindrome.");
         } else {
