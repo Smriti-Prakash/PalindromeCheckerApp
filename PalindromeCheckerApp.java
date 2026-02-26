@@ -1,32 +1,30 @@
 /**
- * Use Case 1 - Palindrome Checker App
- * Objective: Display welcome message and application details at startup
- * Application Name: Palindrome Checker App
- * Version: 1.0
+ * Use Case 2 - Hardcoded Palindrome Check
+ * Objective: Check whether a hardcoded string is a palindrome
  */
 
-public class UseCase1PalindromeCheckerApp {
+public class PalindromeCheckerApp {
+    public static void main(String[] args){
 
-    // Application Constants
-    private static final String APPLICATION_NAME = "Palindrome Checker App";
-    private static final String APPLICATION_VERSION = "1.0";
+        public static void main(String[] args) {
 
-    /**
-     * Entry Point of the Application
-     * JVM invokes this method automatically
-     */
-    public static void main(String[] args) {
 
-        // Welcome Banner
-        System.out.println("===============================================");
-        System.out.println("        Welcome to " + APPLICATION_NAME);
-        System.out.println("===============================================");
-        System.out.println("Application Version : " + APPLICATION_VERSION);
-        System.out.println("Description         : Console-based Palindrome Validation App");
-        System.out.println("===============================================");
+            String word = "madam";
 
-        // Flow Control Message
-        System.out.println("\nApplication started successfully...");
-        System.out.println("Proceeding to next use case...\n");
+            String reversedWord = "";
+
+            for (int i = word.length() - 1; i >= 0; i--) {
+                reversedWord = reversedWord + word.charAt(i);
+            }
+
+            if (word.equals(reversedWord)) {
+                System.out.println("The word \"" + word + "\" is a Palindrome.");
+            } else {
+                System.out.println("The word \"" + word + "\" is NOT a Palindrome.");
+            }
+
+            System.out.println("Program executed successfully.");
+        }
     }
+
 }
